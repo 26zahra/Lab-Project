@@ -1,159 +1,248 @@
 *{
     margin: 0;
     padding: 0;
-
-}
-
-.lab{
+    box-sizing: border-box;
+ }
+ .lab{
     width: 100%;
     height: 100vh;
-    /* display: none; */
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-}
-
-.lab button{
+    align-items: center;    
+ }
+ .lab button{
     margin-top: 30px;
     width: 100px;
     height: 30px;
     display: flex;
+    align-items: center;
     padding: 5px 8px;
     gap: 7px;
-}
-.lab p{
+    cursor: pointer;
+ }
+ .lab p{
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
-}
-.selection {
+ }
+ .selection {
     display: flex;
     gap: 20px;
-    
-}
-
-.lab select {
+ }
+ .lab select{
+    background-color: hotpink;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    outline: none;
+    border:1px solid rgb(197, 197, 197);
+ }
+ .lab input{
     height: 30px;
     width: 250px;
-    border: 1px solid darkgray;
-
-
-}
-.lab input{
-    height: 30px;
-    width: 250px;
-    border: 1px solid darkgray;
-
-}
-    .lab input::-webkit-outer-spin-button,
-    .lab input::-webkit-inner-spin-button {
+    border:1px solid rgb(197, 197, 197);
+    outline: none;
+    padding-left: 5px;
+    font-size: 16px;
+ }
+ .lab input::-webkit-outer-spin-button,
+ .lab input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    }
-.lab-main{
+ }
+ .lab-main{
     width: 300px;
     height: 200px;
     margin-left: 120px;
     margin-top: 80px;
-}
-
-.labCount {
+ }
+ .labCount {
     position: relative;
     width: 50%;
     height: 300px;
     border: 1px solid darkgray;
     background-color: rgb(248, 230, 209);
-}
-.labCount button{
+ }
+ .labCount button{
     position: absolute;
     top: 0px;
     right: 100px;
     color: white;
     background-color: lightskyblue;
     border: 1px solid darkgray;
-}
-table{
+ }
+ table{
     display: none;
     position: relative;
-    width: 80%;
+    width: 90%;
     height: fit-content;
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-table button{
-    width: 70%;
-    padding: 3px 15px;
+    margin:50px auto 0;
+ }
+ table button{
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 3px 10px;
     border-radius: 30px;
-
-}
-tbody tr :nth-child(2){
+    font-size: 13px;
+    border: none;
+ }
+ tbody tr :nth-child(2){
     text-align: left;
     padding-left: 10px;
-}
-
-table thead tr th{
-    height: 40px;
+ }
+ table thead tr th{
+    height: 60px;
+    padding: 5px;
     background-color: rgb(91, 176, 210);
-}
-table th {
+ }
+ table th {
     border: 1px solid black;
-}
-thead th i{
+ }
+ table thead tr th:nth-child(1){
+    width: 3%;
+ }
+ table thead tr th:nth-child(2){
+    width: 10%;
+    max-width: 250px;
+ }
+ table thead tr .date{
+    width: 7%;
+ }
+ table thead th:last-child{
+    width: 5%;
+ }
+ table th p{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+ }
+ thead th i{
     color: red;
-}
-table td{
+ }
+ table td{
     border: 1px solid black;
     padding-top: 5px;
     padding-bottom: 5px ;
-}
-    .modal{
-        display: none;
-        width: 450px;
-        padding: 20px 0px;
-        border: 1px solid darkgray;
-        /* height: 150px; */
-        background-color: white;
-        position: absolute;
-        top: 30%;
-        left: 30%;
-        /* display: flex; */
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
-    }
-    .modal button{
-        padding: 10px 15px;
-        border: 1px solid darkgray;
-        color: white;
-    }
-    .modal-heading {
-       padding-left: 20px;
-       display: flex ;
-       /* gap: 50px; */
-       justify-content: space-between;
-       margin: 0px 15px;
-    }
-    .modal-main{
-        padding-top: 15px;
-        padding-bottom: 15px;
-        text-align: center;
-        border-top: 1px solid darkgray;
-        border-bottom: 1px solid darkgray;
-    }
-    .modal-main button{
-        margin-right: 15px;
-    }
-    .modal-end {
-        margin-left: 60%;
-    }
-    .modal-end button:nth-child(2){
-        background-color: orangered;
-    }
-    .modal-end button:nth-child(1){
-        color: rgb(52, 52, 210);
-        margin-right: 10px;
-    }
-   
+ }
+ .date-modal-body>div{
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: fit-content;
+ box-sizing: border-box;
+ }
+ .date-modal-body>div>input{
+    width: 100%;
+    padding: 5px 0px 5px 5px;
+    font-size: 20px;
+    outline: none;
+    border:1px solid rgb(197, 197, 197);
+    color: rgb(100, 99, 99);
+ }
+ input[type="date"]::-webkit-calendar-picker-indicator{
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+ }
+ .date-modal-body>div>div{
+    width:45px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 128, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .date-modal-body>div>div>svg{
+    width: 30px;
+    height: 30px;
+    fill: rgb(127, 240, 255);
+ }
+ .date-modal-body p{
+    font-size: 20px;
+    margin: 5px 0px 10px 5px;
+    color: rgb(100, 99, 99);
+ }
+ .date-modal-end {
+    margin-left: auto;
+ }
+ .date-modal-end button{
+    padding: 10px 15px;
+    border: none;
+    color: white;
+ }
+ .date-modal-end button:nth-child(2){
+    background-color: orangered;
+ }
+ .date-modal-end button:nth-child(1){
+    color:white;
+    background-color:rgb(0, 128, 255) ;
+    margin-right: 10px;
+ }
+ .modal,.date-modal{
+    width: 450px;
+    padding: 20px;
+    border: 1px solid darkgray;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    z-index: 30;
+ }
+ .modal button{
+    padding: 10px 15px;
+    border: 1px solid darkgray;
+    color: white;
+ }
+ .modal-heading {
+   display: flex ;
+   justify-content: space-between;
+   margin: 0px 10px;
+ }
+ .modal-main{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+ }
+ .modal-main button{
+    margin-right: 15px;
+    border: none;
+ }
+ .modal-end {
+    margin-left:auto;
+ }
+ .modal-end button{
+    border: none;
+ }
+ .modal-end button:nth-child(2){
+    background-color: orangered;
+ }
+ .modal-end button:nth-child(1){
+    background-color: rgb(52, 52, 210);
+    color: white;
+    margin-right: 10px;
+ }
+ .active{
+    background-color: rgb(1, 1, 40) !important;
+ }
+ 
